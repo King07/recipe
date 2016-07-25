@@ -6,10 +6,11 @@ function Connection() {
     this.init = function() {
         this.pool = mysql.createPool({
             connectionLimit: 100,
-            host: 'localhost',
-            user: 'root',
-            password: 'admin',
-            database: 'recipe_api'
+            host: 'us-cdbr-iron-east-04.cleardb.net',
+            user: 'bf2b47dfc5e43e',
+            password: '9b07c4a9',
+            //database: 'recipe_api'
+            database: 'heroku_fe926b47779cb32'
         });
     };
 
