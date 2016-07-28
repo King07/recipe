@@ -59,7 +59,7 @@ function Recipe() {
         connection.acquire(function(err, con) {
             con.query(squel.select().from('user').where('id = ?',id).toString(), function(err, result) {
                 con.release();
-                res.send(result);
+                res.send(result.shift());
             });
         });
     };
@@ -67,7 +67,7 @@ function Recipe() {
         connection.acquire(function(err, con) {
             con.query(squel.select().from('user').where('email = ?',email).toString(), function(err, result) {
                 con.release();
-                res.send(result);
+                res.send(result.shift());
             });
         });
     };

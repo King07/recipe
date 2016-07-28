@@ -26,12 +26,12 @@ module.exports = {
             console.log("get /user/ id");
         });
 
-        app.post('/user/', function(req, res) {
+        app.post('/user/new', function(req, res) {
             recipe.createUser(req.body,res);
             console.log("put /user/");
         });
 
-        app.put('/user/', function(req, res) {
+        app.put('/user/update', function(req, res) {
             recipe.updateUser(req.body,res);
             console.log("put /user/");
         });
